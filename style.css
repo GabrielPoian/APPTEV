@@ -1,0 +1,27 @@
+.logoSanofi{
+    width: 7rem;
+}
+
+#dose{
+    color: red;
+
+}
+.navbar a{
+    font-weight: bold;
+}
+
+/* Centralize o h1 na página */
+main {
+    text-align: center;
+    margin-top: 10rem;
+  }
+  
+ 
+  .doses{
+    margin-top: 4rem;
+  }
+  h2 {
+    display: inline-block;
+    margin: 0rem 10rem;
+  }
+  
