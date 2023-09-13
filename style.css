@@ -71,14 +71,17 @@ h2 {
 #botao-tratamento-3  
 
 
-#botao-tratamento-1:not(.botao-ativo) {
+#botao-tratamento-1:not(.botao-ativo),
+#botao-tratamento-2:not(.botao-ativo),
+#botao-tratamento-3:not(.botao-ativo) {
   opacity: 0.5;
-  /* Define a opacidade desejada para o botão não ativo */
 }
 
-#botao-tratamento-2:not(.botao-ativo) {
-  opacity: 0.5;
-  /* Define a opacidade desejada para o botão não ativo */
+
+#botao-tratamento-1.botao-ativo,
+#botao-tratamento-2.botao-ativo,
+#botao-tratamento-3.botao-ativo {
+  opacity: 1;
 }
 #insuficiencia-texto,#insuficiencia-texto2{
   color: red;
