@@ -104,3 +104,22 @@ footer{
 #inputs-score{
   text-align: start;
 }
+#fundoScore{
+  background-color: rgb(16, 69, 216);
+  font-weight: bold;
+  color: aliceblue;
+  font-size: 1rem;
+}
+#botaoSalvarScore{
+  margin: 1rem 1rem 0 1rem;
+  border-radius: 1rem;
+  height: 3rem;
+  background-color: white;
+
+}
+input:hover{
+  cursor: pointer;
+}
+button:hover{
+  cursor: pointer;
+}
