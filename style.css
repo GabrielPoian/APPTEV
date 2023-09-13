@@ -1,48 +1,90 @@
-.logoSanofi{
-    width: 7rem;
+.logoSanofi {
+  width: 7rem;
 }
 
-#dose{
-    color: red;
+#dose {
+  color: red;
 
 }
-.navbar a{
-    font-weight: bold;
+
+.navbar a {
+  font-weight: bold;
 }
 
 
 main {
-    text-align: center;
-    margin-top: 10rem;
-  }
-  
- 
-  .doses{
-    margin-top: 4rem;
-    align-items: center;
-  }
-  h2 {
-    display: inline-block;
-    margin: 0rem 10rem;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .tratamento-conteiner {
-    flex: 1;
-    margin-right: 20px; 
-  }
-  
-  .profilaxia-conteiner {
-    flex: 1;
-  }
-  .button{
-    display: block;
-  }
+  text-align: center;
+  margin-top: 10rem;
+}
 
-  #pesoInput{
-    width: 6rem;
-  }
+
+.doses {
+  margin-top: 4rem;
+  align-items: center;
+}
+
+h2 {
+  display: inline-block;
+  margin: 0rem 10rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tratamento-conteiner {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.profilaxia-conteiner {
+  flex: 1;
+  margin-left: 20px;
+}
+
+#dosagem {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#botao-tratamento-1,
+#botao-tratamento-2 {
+  margin: 1rem 1rem 0 1rem;
+  border-radius: 1rem;
+  height: 3rem;
+  background-color: white;
+}
+#botao-tratamento-3{
+  height: 3rem;
+  width: 9rem;
+  font-size: 0.7rem;
+  color: red;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: white;
+  margin-top: 5rem;
+}
+
+#botao-tratamento-1,
+#botao-tratamento-2,
+#botao-tratamento-3  
+
+
+#botao-tratamento-1:not(.botao-ativo) {
+  opacity: 0.5;
+  /* Define a opacidade desejada para o botão não ativo */
+}
+
+#botao-tratamento-2:not(.botao-ativo) {
+  opacity: 0.5;
+  /* Define a opacidade desejada para o botão não ativo */
+}
+#insuficiencia-texto,#insuficiencia-texto2{
+  color: red;
+  font-weight: bold;
+}
+
+#pesoInput {
+  width: 6rem;
+}
