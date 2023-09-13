@@ -10,7 +10,7 @@
     font-weight: bold;
 }
 
-/* Centralize o h1 na página */
+
 main {
     text-align: center;
     margin-top: 10rem;
@@ -19,9 +19,30 @@ main {
  
   .doses{
     margin-top: 4rem;
+    align-items: center;
   }
   h2 {
     display: inline-block;
     margin: 0rem 10rem;
   }
   
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tratamento-conteiner {
+    flex: 1;
+    margin-right: 20px; 
+  }
+  
+  .profilaxia-conteiner {
+    flex: 1;
+  }
+  .button{
+    display: block;
+  }
+
+  #pesoInput{
+    width: 6rem;
+  }
