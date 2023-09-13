@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Associar a função a cada link
     mostrarOcultarConteudo("dose", "conteudo-calculo");
     mostrarOcultarConteudo("cirurgicos-link", "conteudo-cirurgicos");
+    mostrarOcultarConteudo("scorePadua-link", "conteudo-scorePadua");
     mostrarOcultarConteudo("clinicos-link", "conteudo-clinicos");
     mostrarOcultarConteudo("avaliacao-link", "conteudo-avaliacao");
     mostrarOcultarConteudo("especiais-link", "conteudo-especiais");

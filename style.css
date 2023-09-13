@@ -91,3 +91,16 @@ h2 {
 #pesoInput {
   width: 6rem;
 }
+
+footer{
+  height: 4rem;
+}
+
+.score-h2{
+  color:blue;
+  white-space: nowrap;
+}
+
+#inputs-score{
+  text-align: start;
+}

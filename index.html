@@ -27,10 +27,23 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Scores  
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <p class="dropdown-item" >Pacientes Cirúrgicos</p>
+                      <a class="dropdown-item" href="#" id="clinicos-link">Avaliação de Risco de Caprini</a>
+                      <br>
+                      <p class="dropdown-item" >Pacientes Clínicos</p>
+                      <a class="dropdown-item" href="#" id="scorePadua-link">Score de Padua</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Profilaxia TEV
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#" id="cirurgicos-link">Pacientes Cirúrgicos</a>
+                      <p class="dropdown-item" href="#" id="cirurgicos-link">Pacientes Cirúrgicos</p>
+                      <a class="dropdown-item" href="#" id="clinicos-link">Ecore de Avaliação de Risco de Caprini</a>
                       <a class="dropdown-item" href="#" id="clinicos-link">Pacientes Cínicos</a>
                     </div>
                   </li>
@@ -43,14 +56,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" id="tratamento-link">Tratamento Do TEV</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="oncologia-link">Oncologia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="cardiologia-link">Cardiologia</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="recursos-link">Recursos</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Outros
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    
+                    <a class="dropdown-item" href="#" id="oncologia-link">Oncologia</a>
+                    <a class="dropdown-item" href="#" id="cardiologia-link">Cardiologia</a>
+                    <a class="dropdown-item" href="#" id="recursos-link">Recursos</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -90,12 +105,68 @@
                 <p id="insuficiencia-texto2"></p>
                 <button id="botao-tratamento-3">Insuficiencia renal grave</button>
               </section>
+              <footer></footer>
       </div>
       <div id="conteudo-cirurgicos" style="display: none;">
         <h1> Profilaxia TEV em Pacientes Cirúrgicos</h1>
       </div>
-      <div id="conteudo-clinicos" style="display: none;">
-        <h1>Profilaxia TEV em Pacientes Cínicos</h1>
+      <div id="conteudo-scorePadua" style="display: none;">
+        <h1>Score De Padua</h1>
+        <div class="container">
+        <div class="tratamento-conteiner">
+          <h2 class="score-h2">Fatores De Risco</h2>
+          <div id="inputs-score">
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Câncer em atividade</label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">História prévia de TEV (excluido trombose
+            venosa superficial)</label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Mobilidade reduzida</label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Tromboflia conhecida
+          </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Trauma ou cirurgia recente ( último mês)</label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Idade avangada (70 anos)
+          </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Insuficiência cardíaca e/ou respiratória
+          </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">infecções e/ou doenças reumatológicas
+          </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Infarto agudo do miocárdio ou acidente vascular
+            cerebral
+            </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Obesidade (IMC > 30)
+          </label>
+          <br>
+          <input type="checkbox" id="checkbox-score">
+          <label for="checkbox-score">Terapia hormonal </label>
+          <br>
+          </div>
+
+
+        </div>
+        <div class="profilaxia-conteiner">
+          <h2>Recomendações</h2>
+          <span id="recomdacaoScore">>=4<br>Risco Alto</span>
+        </div>
+        </div>
+        
       </div>
       <div id="conteudo-avaliacao" style="display: none;">
         <h1>Avaliação de risco em pacientes obstétricas</h1>
