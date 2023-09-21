@@ -1,15 +1,30 @@
 .logoSanofi {
-  width: 7rem;
+  width: 5rem;
 }
+
+
 
 #dose {
   color: red;
 
 }
 
-.navbar a {
+#navbar{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 0.3rem solid;
+
+}
+#navbar a{
+  color: #2D689c;
   font-weight: bold;
 }
+#navbar p{
+  color:black;
+  font-weight: bold;
+}
+
+
 
 
 main {

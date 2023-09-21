@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APPTEV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -15,8 +19,8 @@
 
 <body>  
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img class="logoSanofi" src="/imagens/APPTEV (3).png"  alt="Logo da sanofi">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+            <!--<img class="logoSanofi" src="/imagens/APPTEV (3).png"  alt="Logo da sanofi" >-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,19 +51,10 @@
                       <a class="dropdown-item" href="#" id="clinicos-link">Algoritmo de Avaliação de Risco Safety Zone</a>
                       <a class="dropdown-item" href="#" id="clinicos-link">Posologia</a>
                       <a class="dropdown-item" href="#" id="clinicos-link">Manejo Perioperatóriio</a>
-                    </div>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Profilaxia TEV
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <p class="dropdown-item" href="#" id="cirurgicos-link">Pacientes Clínicos</p>
+                      <p class="dropdown-item" href="#" id="cirurgicos-link">Pacientes Clínicos</p>
                         <a class="dropdown-item" href="#" id="clinicos-link">Algoritmo da Diretriz Brasileira de Profilaxia de Tev em Pacientes Clínicos</a>
                         <a class="dropdown-item" href="#" id="clinicos-link">Posologia</a>
-
-                      </div>
-                    
-                  </li>
+                    </div>
                 <li class="nav-item">
                   <a class="nav-link" href="#" id="avaliacao-link">Avaliação de risco em pacientes obstétricas</a>
                 </li>
