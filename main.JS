@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const linkCalculoDose = document.getElementById("dose");
+  const linkCalculoDose = document.getElementById("doseLink");
   const textoScore = document.getElementById("recomendacaoScore");
   const secaoCalculoDose = document.getElementById("conteudo-calculo");
   const pesoInput = document.getElementById("pesoInput");
@@ -35,12 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Associar a função a cada link
-  mostrarOcultarConteudo("dose", "conteudo-calculo");
-  mostrarOcultarConteudo("cirurgicos-link", "conteudo-cirurgicos");
+  mostrarOcultarConteudo("doseLink", "conteudo-calculo");
+  mostrarOcultarConteudo("avaliacaoCaprini-link", "conteudo-avaliacaoCaprini");
   mostrarOcultarConteudo("scorePadua-link", "conteudo-scorePadua");
-  mostrarOcultarConteudo("clinicos-link", "conteudo-clinicos");
-  mostrarOcultarConteudo("avaliacao-link", "conteudo-avaliacao");
-  mostrarOcultarConteudo("especiais-link", "conteudo-especiais");
+  mostrarOcultarConteudo("recomendacao-link", "conteudo-recomendacao");
+  mostrarOcultarConteudo("algoritimoSafety-link", "conteudo-avaliacaoSafety");
+  mostrarOcultarConteudo("posologiaCirurgico-link", "conteudo-posologiaCirurgico");
+  mostrarOcultarConteudo("manejo-link", "conteudo-manejo");
+  mostrarOcultarConteudo("algoritimoPacinetesClinicos-link", "conteudo-algoritimoPacinetesClinicos");
+  mostrarOcultarConteudo("posologiaClinico-link", "conteudo-posologiaClinico");
+  mostrarOcultarConteudo("pacientesObtetricas-link", "conteudo-pacientesObtetricas");
+  mostrarOcultarConteudo("insufucienciaRenal-link", "conteudo-insuficienciaRenal");
+  mostrarOcultarConteudo("pacientesObesos-link", "conteudo-pacientesObesos");
   mostrarOcultarConteudo("tratamento-link", "conteudo-tratamento");
   mostrarOcultarConteudo("oncologia-link", "conteudo-oncologia");
   mostrarOcultarConteudo("cardiologia-link", "conteudo-cardiologia");

@@ -24,8 +24,17 @@
   font-weight: bold;
 }
 
+.dropdownMargin{
+  margin-top: -1rem ;
+}
 
+.dropdownTitle{
+  margin-top: 1rem;
+}
 
+.teste:hover{
+  background-color: black;
+}
 
 main {
   text-align: center;
@@ -81,9 +90,7 @@ h2 {
   margin-top: 5rem;
 }
 
-#botao-tratamento-1,
-#botao-tratamento-2,
-#botao-tratamento-3  
+  
 
 
 #botao-tratamento-1:not(.botao-ativo),
@@ -137,4 +144,8 @@ input:hover{
 }
 button:hover{
   cursor: pointer;
+}
+
+#linkTitulo{
+  pointer-events: none;
 }
