@@ -375,30 +375,209 @@
       </div>
       <div id="conteudo-manejo" style="display: none;">
         <h1>Manejo Perioperatóriio</h1>
+        <img class="imagemManejo" src="/imagens/imagemManejo.png">
       </div>
       <div id="conteudo-algoritimoPacinetesClinicos" style="display: none;">
         <h1>Algoritmo da Diretriz Brasileira de Profilaxia de Tev em Pacientes Clínicos</h1>
       </div>
       <div id="conteudo-posologiaClinico" style="display: none;">
         <h1>Posologia</h1>
+        <h2>HBPMSC</h2>
+
+        <p>vez ao dia
+        Enoxaparina 40 mg, ou<br>
+        dalteparina 5.000 UI
+        ouEnoxaparina 40 mg, ou
+        dalteparina 5.000 UI<br>ou</p>
+        
+        <h2>HNF 5.000UISC</h2> 
+        <p>8/8h</h2>
+
+        <p>Manter por 10+4 dias
+          ou enquanto persistir o risco</p>
       </div>
       <div id="conteudo-pacientesObtetricas" style="display: none;">
         <h1>Avaliação de risco em pacientes obstétricas</h1>
+        <h2 class="score-h2">Fatores de risco</h2>
+          <div id="inputs-score">
+            <input type="checkbox" id="checkbox-score1" class="inputGrave">
+            <label for="checkbox-score1">TEV anterior (exceto um único evento relativo a cirurgia de grande porte).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score2" class="inputGrave">
+            <label for="checkbox-score2">TEV prévio provocado por cirurgia de grande porte.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score3" class="inputGrave">
+            <label for="checkbox-score3">Trombofilia conhecida de alto risco.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score4" class="inputGrave">
+            <label for="checkbox-score4">Comorbidades médicas como Câncer, Insuficiência cardíaca, lúpus eritematoso sistêmico ativo, poliartropatia inflamatória ou doença intestinal inflamatória, nefrose Diabetes Melitus Tipo 1 com nefropatia, doença falciforme, uso atual de drogas intravenosas.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score5" class="inputGrave">
+            <label for="checkbox-score5">História familiar de TEV não provocado ou relacionado a estrogênio em parente de primeiro grau.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score6" class="inputGrave">
+            <label for="checkbox-score6">Trombofilia de baixo risco conhecida (sem TEV).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score7" class="inputGrave">
+            <label for="checkbox-score7">Idade (>35 anos).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score8" class="inputGrave">
+            <label for="checkbox-score8">Obesidade.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score9" class="inputGrave">
+            <label for="checkbox-score9">Paridade >= 3.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score10" class="inputGrave">
+            <label for="checkbox-score10">Tabagismo.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score11" class="inputGrave">
+            <label for="checkbox-score11">Veias varicosas de grosso calibre.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score12" class="inputGrave">
+            <label for="checkbox-score12">Fatores de risco obstétricos.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score13" class="inputGrave">
+            <label for="checkbox-score13">Pré-eclâmpsia na gravidez atual.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score14" class="inputGrave">
+            <label for="checkbox-score14">FIV/técnica de reprodução assistida.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score15" class="inputGrave">
+            <label for="checkbox-score15">Gravidez múltipla.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score16" class="inputGrave">
+            <label for="checkbox-score16">Cesariana em trabalho de parto.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score17" class="inputGrave">
+            <label for="checkbox-score17">Cesariana eletiva.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score18" class="inputGrave">
+            <label for="checkbox-score18">Fórceps médio ou rotação.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score19" class="inputGrave">
+            <label for="checkbox-score19">Trabalho de parto prolongado (>24 horas).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score20" class="inputGrave">
+            <label for="checkbox-score20">HPP (>1 L ou transfusão).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score21" class="inputGrave">
+            <label for="checkbox-score21">Nascimento pré-termo <37+0 semanas na gravidez atual.</label>
+            <br>
+            <h2 class="score-h2">Fatores de risco</h2>
+            <br>
+            <input type="checkbox" id="checkbox-score22" class="inputMedio">
+            <label for="checkbox-score22">Natimorto na gravidez atual.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score23" class="inputMedio">
+            <label for="checkbox-score23">HPP (>1 L ou transfusão) na gravidez atual.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score24" class="inputMedio">
+            <label for="checkbox-score24">Nascimento pré-termo <37+0 semanas na gravidez atual.</label>
+            <br>
+            <h2 class="score-h2">Fatores de risco transitórios</h2>
+            <br>
+            <input type="checkbox" id="checkbox-score25" class="inputLeve">
+            <label for="checkbox-score25">Qualquer procedimento cirúrgico durante a gravidez ou o puerpério, exceto reparação imediata do períneo, como apendicectomia ou esterilização pós-parto.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score26" class="inputLeve">
+            <label for="checkbox-score26">Hipérnese.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score27" class="inputLeve">
+            <label for="checkbox-score27">SHO (apenas no primeiro trimestre).</label>
+            <br>
+            <input type="checkbox" id="checkbox-score28" class="inputLeve">
+            <label for="checkbox-score28">Infecção sistêmica atual.</label>
+            <br>
+            <input type="checkbox" id="checkbox-score29" class="inputLeve">
+            <label for="checkbox-score29">Imobilidade, desidratação.</label>
+            <br>
+          </div>
+
       </div>
       <div id="conteudo-insuficienciaRenal" style="display: none;">
         <h1>Insuficiência Renal Grave</h1>
+        <img class="imagemInsuficienciaRenal" src="/imagens/insuficiencia_renal.png">
       </div>
       <div id="conteudo-pacientesObesos" style="display: none;">
         <h1>Pacientes com baixo peso e obesos</h1>
+        <p>Pacientes com baixo peso: Sem a necessidade
+          de ajuste de dose, aconselha-se a
+          monitorização clínica cuidadosa.</p>
+        <ul>
+          <li>Mulheres < 45kg</li>
+          <li>Homens < 57 kg</li>
+
+        </ul>
+        <p>Pacientes obesos
+          apresentam maior risco de tromboembolismo
+          Esses pacientes devem ser cuidadosamente
+          observados para sinais e sintomas de
+          tromboembolismo.'</p>
+        <p>GUÍAS ACCP 201223 Um aumento na dose
+          de drogas anticoagulantes poderia ser
+          avaliado em relação à dose padrão em
+          pacientes obesos submetidos à cirurgia
+          bariátrica e em outras situações.</p>
       </div>
       <div id="conteudo-tratamento" style="display: none;">
         <h1>Tratamento Do TEV</h1>
+        <h2>1 vez ao dia<br> 1,5 mg/kg/24h</h2>
+        <p>○ regime de 1 vez por dia de
+          ENOXAPARINA é o  mais
+          comumente usado na</p>
+        <h2>2 vezes ao dia<br> 1 mg/kg/12h</h2>
       </div>
       <div id="conteudo-oncologia" style="display: none;">
         <h1>Oncologia</h1>
+        <p>Sugerimos um tratamento agudo e de longo prazo
+          de TEV em pacientes com câncer com HBPM,
+          preferencialmente ao longo de AVK pelo menos 6
+          meses. 1</p>
+        <p>Anticoagulação após 6 meses (HBMP ou AVK)
+          pode ser considerada em pacientes selecionados
+          com câncer ativo (doença metastática ou
+          tratamento com quimioterapia).</p>
+          
+        <p>PACIENTES COM CÂNCER E TEV</p>  
+        <p>TRATAMENTO NA FASE
+          AGUDA E NO LONGO PRAZO</p>
+        <p>Enoxaparina</p>
+        <p>1 vez ao dia<br>
+          1,5 mg/kg/24h</p>
+        
       </div>
       <div id="conteudo-cardiologia" style="display: none;">
         <h1>Cardiologia</h1>
+        <h2>Tratamento Infarto agudo do
+          Miocárdio
+          sem elevação do segmento ST</h2>
+          <p>Dose recomendada
+            1 mg/kg a cada 12 horas via SC administrada em
+            combinação com terapia antiplaquetária. O
+            tratamento deve ser mantido por no mínimo 2 dias
+            e continuar até a estabilização clínica. A duração
+            habitual do tratamento é de 2 a 8 dias.</p>
+        <h2>Tratamento Infarto agudo do
+          Miocárdio
+          com elevação do segmento ST</h2>
+        <p>IAMSEST
+
+          Dose recomendada
+          
+          Bolus intravenoso (IV) de 30 mg mais uma dose
+          SC de 1 mg/Kg seguido por uma administração SC
+          de 1 mg/kg a cada 12 horas (máximo 100 mg para
+          cada uma das duas primeiras doses SC). Uma
+          terapia antiplaquetária apropriada deve ser
+          administrada em conjunto como ácido
+          acetilsalicílico por via oral (75 mg a 325 mg uma
+          vez por dia), a menos que seja contraindicado. A
+          duração recomendada do tratamento é de 8 dias
+          ou até a alta hospitalar, o que ocorrer primeiro.
+          Tabela de dosagem para doentes com
+          insuficiência renal grave (depuração da creatinina
+          [15-30] ml/ min):</p>  
+          <img class="imagemCardiologia" src="/imagens/cardiologia.png">
       </div>
       <div id="conteudo-recursos" style="display: none;">
         <h1>Recursos</h1>
