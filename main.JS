@@ -168,15 +168,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Atualizar o texto do span com base na pontuação
     if (pontuacao < 4) {
-      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Baixo<br>Para pacientes enfermos e hospitalizados
+      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Baixo<br>Para pacientes adudamente enfermos e
+      hospitalizados com baixo risco de TEV,recomenda-se contra o uso detromboproflaxia farmacologica ou mecânica.`;
+      document.getElementById("fundoScore").style.backgroundColor = "rgb(16, 69, 216)";
+    } else {
+      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Alto<br>Para pacientes enfermos e hospitalizados
       com alto risco de TEV, recomenda-se
       tromboproflaxia farmacologica com
       HBPM, HNF (de 12-12h ou 8-8h) ou
       fondaparina.`;
-      document.getElementById("fundoScore").style.backgroundColor = "rgb(16, 69, 216)";
-    } else {
-      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Alto<br>Para pacientes adudamente enfermos e
-      hospitalizados com baixo risco de TEV,recomenda-se contra o uso detromboproflaxia farmacologica ou mecânica.`;
       document.getElementById("fundoScore").style.backgroundColor = "red";
     }
 

@@ -57,12 +57,12 @@ h2 {
   justify-content: space-between;
 }
 
-.tratamento-conteiner {
+.esquerdo-conteiner {
   flex: 1;
   margin-right: 20px;
 }
 
-.profilaxia-conteiner {
+.direito-conteiner {
   flex: 1;
   margin-left: 20px;
 }
@@ -121,11 +121,42 @@ footer{
 .score-h2{
   color:blue;
   white-space: nowrap;
+  
 }
 
 #inputs-score{
   text-align: start;
 }
+
+
+.inputScore {
+  transform: scale(1.5); 
+  margin-right: 0.5rem;
+  transition: transform 0.3s; 
+}
+
+
+.inputScore:hover {
+  transform: scale(2); 
+}
+
+
+.textoScore {
+  font-size: 1.07rem;
+  font-weight: bold;
+  white-space: nowrap;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem; /* Adicione algum preenchimento para espaçamento interno */
+}
+
+.textoScore:hover {
+  transform: scale(2rem);
+  color: blue;
+  border: 2px solid black; /* Adicione a borda apenas no estado :hover */
+  cursor: pointer;
+}
+
+
 #fundoScore{
   background-color: rgb(16, 69, 216);
   font-weight: bold;

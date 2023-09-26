@@ -89,7 +89,7 @@
         <h1>Calculo da Dose</h1>
         <section class="doses" id="calculo-dose-section">
           <div class="container">
-            <div class="tratamento-conteiner">
+            <div class="esquerdo-conteiner">
               <h2>Tratamento</h2>
               <p>Dose para tratamento do tromboembolismo venoso com <br>ou sem embolia pulmonar</p>
             <div id="dosagem">
@@ -107,7 +107,7 @@
                   <button id="botao-tratamento-2">1 mg/kg <em>12h</em></button>
                 </div>
             </div>
-            <div class="profilaxia-conteiner">
+            <div class="direito-conteiner">
               <h2>Profilaxia</h2>
               <p>Dose para profilaxia de TEV</p>
               <div id="dosagem">
@@ -250,70 +250,78 @@
   
       </div>
       <div id="conteudo-scorePadua" style="display: none;">
-        <h1>Score de Padua</h1>
-        <div class="container">
-        <div class="tratamento-conteiner">
-          <h2 class="score-h2">Fatores De Risco</h2>
-          <div id="inputs-score">
-          <input type="checkbox" id="checkbox-score" class="inputGrave">
-          <label for="checkbox-score">Câncer em atividade</label>
-          <br>
-          <input type="checkbox" id="checkbox-score" class="inputGrave">
-          <label for="checkbox-score">História prévia de TEV (excluido trombose
-            venosa superficial)</label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputGrave">
-          <label for="checkbox-score">Mobilidade reduzida</label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputGrave">
-          <label for="checkbox-score">Tromboflia conhecida
-          </label>
-          <br>
-          <input type="checkbox" id="checkbox-score" class="inputMedio">
-          <label for="checkbox-score">Trauma ou cirurgia recente ( último mês)</label>
-          <br>
-          <input type="checkbox" id="checkbox-score" class="inputLeve">
-          <label for="checkbox-score">Idade avangada (70 anos)
-          </label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputLeve">
-          <label for="checkbox-score">Insuficiência cardíaca e/ou respiratória
-          </label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputLeve">
-          <label for="checkbox-score">infecções e/ou doenças reumatológicas
-          </label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputLeve">
-          <label for="checkbox-score">Infarto agudo do miocárdio ou acidente vascular
-            cerebral
-            </label>
-          <br>
-          <input type="checkbox" id="checkbox-score"class="inputLeve">
-          <label for="checkbox-score">Obesidade (IMC > 30)
-          </label>
-          <br>
-          <input type="checkbox" id="checkbox-score" class="inputLeve">
-          <label for="checkbox-score">Terapia hormonal </label>
-          <br>
+      <h1>Escore de Padua</h1>
+      <div class="container">
+          <div class="esquerdo-conteiner">
+              <h2 class="score-h2">Fatores De Risco</h2>
+              <div id="inputs-score">
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score1" class="inputGrave inputScore">
+                      <span class="textoScore">Câncer em atividade</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score2" class="inputGrave inputScore">
+                      <span class="textoScore">História prévia de TEV (excluído trombose venosa superficial)</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score3" class="inputGrave inputScore">
+                      <span class="textoScore">Mobilidade reduzida</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score4" class="inputGrave inputScore">
+                      <span class="textoScore">Trombofilia conhecida</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score5" class="inputMedio inputScore">
+                      <span class="textoScore">Trauma ou cirurgia recente ( último mês)</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score6" class="inputLeve inputScore">
+                      <span class="textoScore">Idade avançada (70 anos)</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score7" class="inputLeve inputScore">
+                      <span class="textoScore">Insuficiência cardíaca e/ou respiratória</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score8" class="inputLeve inputScore">
+                      <span class="textoScore">Infecções e/ou doenças reumatológicas</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score9" class="inputLeve inputScore">
+                      <span class="textoScore">Infarto agudo do miocárdio ou acidente vascular cerebral</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score10" class="inputLeve inputScore">
+                      <span class="textoScore">Obesidade (IMC > 30)</span>
+                  </label>
+                  <br>
+                  <label class="checkbox-label">
+                      <input type="checkbox" id="checkbox-score11" class="inputLeve inputScore ">
+                      <span class="textoScore">Terapia hormonal</span>
+                  </label>
+                  <br>
+              </div>
           </div>
+    <div class="direito-conteiner">
+        <h2>Recomendações</h2>
+        <div id="fundoScore">
+            <span id="recomendacaoScore">>=0<br>Risco<br>Para pacientes enfermos e hospitalizados com alto risco de TEV, recomenda-se tromboprofilaxia farmacológica com HBPM, HNF (de 12-12h ou 8-8h) ou fondaparina.</span>
+        </div>
+        <button id="botaoSalvarScore">Salvar Score</button>
+    </div>
+    <footer></footer>
+</div>
 
-
-        </div>
-        <div class="profilaxia-conteiner">
-          <h2>Recomendações</h2>
-          <div id="fundoScore">
-          <span id="recomendacaoScore">>=0<br>Risco<br>Para pacientes enfermos e hospitalizados
-            com alto risco de TEV, recomenda-se
-            tromboproflaxia farmacologica com
-            HBPM, HNF (de 12-12h ou 8-8h) ou
-            fondaparina.</span>
-          </div>
-          <button id="botaoSalvarScore">Salvar Score</button>
-        </div>
-        <footer></footer>
-        </div>
-        
       </div>
       <div id="conteudo-recomendacao" style="display: none;">
         <h1>Recomendações	</h1>
