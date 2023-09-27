@@ -133,7 +133,11 @@ footer{
   text-align: start;
   width: 35rem;
 }
+#inputs-score-adaptado{
+  text-align: start;
+  width: 53rem;
 
+}
 
 .inputScore {
   transform: scale(1.5); 
