@@ -59,12 +59,14 @@ h2 {
 
 .esquerdo-conteiner {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 5rem;
+  margin-top: 3rem;
 }
 
 .direito-conteiner {
   flex: 1;
   margin-left: 20px;
+  margin-top: 3rem;
 }
 
 #dosagem {
@@ -119,8 +121,10 @@ footer{
 }
 
 .score-h2{
-  color:blue;
+  color:#0D5493;
   white-space: nowrap;
+  padding-bottom: 2rem;
+  font-weight: bold;
   
 }
 
@@ -149,6 +153,20 @@ footer{
   padding: 0.5rem 1rem; /* Adicione algum preenchimento para espaçamento interno */
 }
 
+
+.textoScoreGrande{
+  font-size: 1.07rem;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0.5rem 1rem; /* Adicione algum preenchimento para espaçamento interno */
+
+}
+
+.textoScoreGrande:hover{
+  color: blue;
+  cursor: pointer;
+}
+
 .textoScore:hover {
   transform: scale(2rem);
   color: blue;
@@ -158,11 +176,24 @@ footer{
 
 
 #fundoScore{
-  background-color: rgb(16, 69, 216);
+  background-color:#0059A7;
   font-weight: bold;
-  color: aliceblue;
-  font-size: 1rem;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 10rem;
 }
+#fundoScoreCaprini{
+  background-color:#0059A7;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 10rem;
+}
+
 #botaoSalvarScore{
   margin: 1rem 1rem 0 1rem;
   border-radius: 1rem;

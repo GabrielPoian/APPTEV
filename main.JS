@@ -14,6 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxesMedio = document.querySelectorAll('.inputMedio');
   const checkboxesGrave = document.querySelectorAll('.inputGrave');
   const recomendacaoScore = document.getElementById("recomendacaoScore");
+  const checkboxesLeveCaprini = document.querySelectorAll('.inputLeveCaprini');
+  const checkboxesMedioCaprini = document.querySelectorAll('.inputMedioCaprini');
+  const checkboxesGraveCaprini = document.querySelectorAll('.inputGraveCaprini');
+  const checkboxesForteCaprini = document.querySelectorAll('.inputForteCaprini')
+  const recomendacaoScoreCaprini = document.getElementById("recomendacaoScoreCaprini");
+
 
   function mostrarOcultarConteudo(linkId, conteudoId) {
     const link = document.getElementById(linkId);
@@ -170,17 +176,88 @@ document.addEventListener("DOMContentLoaded", function () {
     if (pontuacao < 4) {
       recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Baixo<br>Para pacientes adudamente enfermos e
       hospitalizados com baixo risco de TEV,recomenda-se contra o uso detromboproflaxia farmacologica ou mecânica.`;
-      document.getElementById("fundoScore").style.backgroundColor = "rgb(16, 69, 216)";
+      document.getElementById("fundoScore").style.backgroundColor = "#0059A7";
     } else {
       recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Alto<br>Para pacientes enfermos e hospitalizados
       com alto risco de TEV, recomenda-se
       tromboproflaxia farmacologica com
       HBPM, HNF (de 12-12h ou 8-8h) ou
       fondaparina.`;
-      document.getElementById("fundoScore").style.backgroundColor = "red";
+      document.getElementById("fundoScore").style.backgroundColor = "#EF3D2F";
     }
 
 
     
   }
+  checkboxesLeveCaprini.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoCaprini);
+  });
+
+  // Adicionar ouvinte de evento para checkboxes Médio
+  checkboxesMedioCaprini.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoCaprini);
+  });
+
+  // Adicionar ouvinte de evento para checkboxes Grave
+  checkboxesGraveCaprini.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoCaprini);
+  });
+
+  checkboxesForteCaprini.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoCaprini);
+  });
+
+  function calcularPontuacaoCaprini() {
+    let pontuacaoCaprini = 0;
+
+    // Calcular pontuação com base nas checkboxes marcadas
+    checkboxesLeveCaprini.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoCaprini += 1;
+      }
+    });
+
+    checkboxesMedioCaprini.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoCaprini += 2;
+      }
+    });
+
+    checkboxesGraveCaprini.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoCaprini += 3;
+      }
+    });
+
+    checkboxesForteCaprini.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoCaprini += 5;
+      }
+    });
+
+    // Atualizar o texto do span com base na pontuação
+    if (pontuacaoCaprini == 0) {
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Muito Baixo<br>Deambulação precose`;
+      document.getElementById("fundoScoreCaprini").style.backgroundColor = "#0059A7";
+  } else if (pontuacaoCaprini >0 && pontuacaoCaprini < 3) {
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Rsco Baixo<br>Profilaxia mecánico (CPI)*`;
+      document.getElementById("fundoScoreCaprini").style.backgroundColor = "#488BC0";
+      
+  } else if (pontuacaoCaprini >= 3 && pontuacaoCaprini < 5) {
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Moderado<br>Profilaxia farmacólogica`; // Adicione sua recomendação aqui.
+      document.getElementById("fundoScoreCaprini").style.backgroundColor = "#F47A75";
+  } else {
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Alto Risco<br>Proflaxia farmacológica (HNF ou HBPM)
+      profilaxia mecáncia (CPI ou meias
+      antitrombo)<br>Pacientes de alto risco submetido à
+      cirurgia oncológica abdominal e pélvica:
+      estender a proflaxia por 4 semanas`;
+      document.getElementById("fundoScoreCaprini").style.backgroundColor = "#EF3D2F";
+  }
+  
+
+
+    
+  }
+
 });
