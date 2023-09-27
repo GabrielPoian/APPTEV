@@ -19,9 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxesGraveCaprini = document.querySelectorAll('.inputGraveCaprini');
   const checkboxesForteCaprini = document.querySelectorAll('.inputForteCaprini')
   const recomendacaoScoreCaprini = document.getElementById("recomendacaoScoreCaprini");
-  const botaoScore = document.getElementById("botaoSalvarScore")
-  const spanTeste = document.querySelectorAll('.spanCaprini')
-
+  const checkboxesLeveObstreticas = document.querySelectorAll('.inputLeveObstreticas');
+  const checkboxesMedioObstretricas = document.querySelectorAll('.inputMedioObstreticas');
+  const checkboxesGraveObstreticas = document.querySelectorAll('.inputGraveObstreticas');
+  const recomendacaoScoreObstreticas = document.getElementById("recomendacaoScoreObstreticas");
+  
 
 
 
@@ -299,6 +301,88 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+checkboxesLeveObstretricas.forEach(function (checkbox) {
+  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
+});
+
+// Adicionar ouvinte de evento para checkboxes Médio
+checkboxesMedioObstretricas.forEach(function (checkbox) {
+  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
+});
+
+// Adicionar ouvinte de evento para checkboxes Grave
+checkboxesGraveObstretricas.forEach(function (checkbox) {
+  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
+});
+
+checkboxesForteObstretricas.forEach(function (checkbox) {
+  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
+});
+
+function calcularPontuacaoObstretricas() {
+  let pontuacaoObstretricas = 0;
+
+  // Calcular pontuação com base nas checkboxes marcadas
+  checkboxesLeveObstretricas.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      pontuacaoObstretricas += 1;
+    }
+  });
+
+  checkboxesMedioObstretricas.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      pontuacaoObstretricas += 3;
+    }
+  });
+
+  checkboxesGraveObstretricas.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      pontuacaoObstretricas += 4;
+    }
+  });
+
+  
+
+  // Atualizar o texto do span com base na pontuação
+  if (pontuacaoObstretricas == 0) {
+    recomendacaoScoreObstretricas.innerHTML = `${pontuacaoObstretricas}<br>Risco Muito Baixo<br>Deambulação precose`;
+    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Muito Baixo<br> `;
+    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#0059A7";
+} else if (pontuacaoCaprini >0 && pontuacaoCaprini < 3) {
+    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Baixo<br>Profilaxia mecánico (CPI)*`;
+    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Baixo<br> `;
+    document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia mecánico (CPI)* `;
+    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#488BC0";
+    
+} else if (pontuacaoCaprini >= 3 && pontuacaoCaprini < 5) {
+    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Moderado<br>Profilaxia farmacólogica`;
+    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Moderado<br> `;
+    document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia farmacólogica `;
+    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#F47A75";
+} else {
+    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Alto Risco<br>Proflaxia farmacológica (HNF ou HBPM)
+    profilaxia mecáncia (CPI ou meias
+    antitrombo)<br>Pacientes de alto risco submetido à
+    cirurgia oncológica abdominal e pélvica:
+    estender a proflaxia por 4 semanas`;
+    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Alto Risco<br> `;
+    document.getElementById("prontuarioCaprini").innerHTML = `Proflaxia farmacológica (HNF ou HBPM)
+    profilaxia mecáncia (CPI ou meias
+    antitrombo)<br>Pacientes de alto risco submetido à
+    cirurgia oncológica abdominal e pélvica:
+    estender a proflaxia por 4 semanas `;
+    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#EF3D2F";
+}
+
+
+
+  
+};
+
+
+
+
+
 
 
 

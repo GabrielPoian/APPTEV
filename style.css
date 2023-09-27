@@ -40,6 +40,32 @@ main {
   text-align: center;
   margin-top: 10rem;
 }
+#comoUsar{
+  font-size: 1.4rem;
+}
+
+#comoUsar p{
+font-weight: bold;
+margin-top: 1rem;
+margin-left: 8rem;
+}
+
+#comoUsar h1{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#comoUsar button{
+  text-align: center;
+}
+
+#botaoInicio{
+  background-color: white;
+  color: red;
+  border: solid 0.1rem black;
+  border-radius: 1rem;
+  
+}
 
 
 .doses {
@@ -330,4 +356,86 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+}
+
+
+#oncologia1{
+  background-color:#cc0303;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 1.4rem;
+  height:2rem;
+  width:19rem;
+}
+
+#oncologia2{
+  background-color:#6b6a68;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 4rem;
+  width: 19rem;
+}
+
+
+#Enoxaparina{
+  color:#180e5f;
+  font-size:2.5rem;
+  font-weight: bold;
+}
+
+#Enoxaparina2{
+  color:#6b6a68;
+  font-size:3.4rem;
+  font-weight: bold;
+}
+
+#Enoxaparina3{
+  color:#6b6a68;
+  font-size:1.4rem;
+}
+
+#trataTev{
+  background-color:#0059A7;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 6rem;
+  width:21rem;
+}
+
+#peso1{
+  color:#180e5f;
+  font-size:1.5rem;
+  font-weight: bold;
+}
+
+#peso{
+  color:#180e5f;
+  font-size:1;
+  font-weight: bold;
+}
+
+
+#cardio{
+  background-color:#cc0303;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 1.4rem;
+  height:5rem;
+  width:17rem;
+}
+
+#dose{
+  color:#6b6a68;
+  font-size:1.4rem;
+  font-weight: bold;
 }
