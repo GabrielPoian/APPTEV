@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxesGraveCaprini = document.querySelectorAll('.inputGraveCaprini');
   const checkboxesForteCaprini = document.querySelectorAll('.inputForteCaprini')
   const recomendacaoScoreCaprini = document.getElementById("recomendacaoScoreCaprini");
+  const botaoScore = document.getElementById("botaoSalvarScore")
+  const spanTeste = document.querySelectorAll('.spanCaprini')
+
+
 
 
   function mostrarOcultarConteudo(linkId, conteudoId) {
@@ -42,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Associar a função a cada link
   mostrarOcultarConteudo("doseLink", "conteudo-calculo");
+  mostrarOcultarConteudo("prontuario-link", "conteudo-prontuario");
   mostrarOcultarConteudo("avaliacaoCaprini-link", "conteudo-avaliacaoCaprini");
   mostrarOcultarConteudo("scorePadua-link", "conteudo-scorePadua");
   mostrarOcultarConteudo("recomendacao-link", "conteudo-recomendacao");
@@ -57,6 +62,23 @@ document.addEventListener("DOMContentLoaded", function () {
   mostrarOcultarConteudo("oncologia-link", "conteudo-oncologia");
   mostrarOcultarConteudo("cardiologia-link", "conteudo-cardiologia");
   mostrarOcultarConteudo("recursos-link", "conteudo-recursos");
+
+
+
+
+  var dataAtual = new Date();
+
+  // Formate a data para exibição
+  var dia = dataAtual.getDate();
+  var mes = dataAtual.getMonth() + 1; // Adicione 1 porque os meses são indexados a partir de 0
+  var ano = dataAtual.getFullYear();
+
+  // Construa a string da data no formato desejado (por exemplo, dd/mm/aaaa)
+  var dataFormatada = dia + '/' + mes + '/' + ano;
+
+  // Exiba a data no elemento HTML com o id "data"
+  document.getElementById("data").innerHTML = dataFormatada;
+
 
   linkCalculoDose.addEventListener("click", function (event) {
     event.preventDefault();
@@ -106,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const dosagem = Math.ceil(peso * multiplicador);
 
       dosagemTratamento.textContent = dosagem + " mg";
+      document.getElementById("prontuarioDosagem").innerHTML = `Dosagem para tratamento: ${dosagem}mg<br>Dosagem para Profilaxia: ${dosagemProfilaxia.textContent }`;
+      
     } else {
       dosagemTratamento.textContent = "Peso inválido";
     }
@@ -173,18 +197,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Atualizar o texto do span com base na pontuação
-    if (pontuacao < 4) {
-      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Baixo<br>Para pacientes adudamente enfermos e
-      hospitalizados com baixo risco de TEV,recomenda-se contra o uso detromboproflaxia farmacologica ou mecânica.`;
-      document.getElementById("fundoScore").style.backgroundColor = "#0059A7";
-    } else {
-      recomendacaoScore.innerHTML = `>=${pontuacao}<br>Risco Alto<br>Para pacientes enfermos e hospitalizados
-      com alto risco de TEV, recomenda-se
-      tromboproflaxia farmacologica com
-      HBPM, HNF (de 12-12h ou 8-8h) ou
-      fondaparina.`;
-      document.getElementById("fundoScore").style.backgroundColor = "#EF3D2F";
-    }
+   
+
+  if (pontuacao < 4) {
+  document.getElementById("recomendacaoScore").innerHTML = `>=${pontuacao}<br>Risco Baixo<br>Para pacientes adudamente enfermos e hospitalizados com baixo risco de TEV,recomenda-se contra o uso detromboproflaxia farmacologica ou mecânica.`;
+  document.getElementById("riscoPadua").innerHTML = `<strong>Escore de Padua: </strong>Risco Baixo `;
+  document.getElementById("prontuarioPadua").innerHTML = `Não fazer o uso de etromboproflaxia farmacologica ou mecânica. `;
+  
+  document.getElementById("fundoScore").style.backgroundColor = "#0059A7";
+  } else {
+  document.getElementById("recomendacaoScore").innerHTML = `>=${pontuacao}<br>Risco Alto<br>Para pacientes enfermos e hospitalizados com alto risco de TEV, recomenda-se tromboproflaxia farmacologica com HBPM, HNF (de 12-12h ou 8-8h) ou fondaparina.`;
+  document.getElementById("riscoPadua").innerHTML = `<strong>Escore de Padua: </strong>Risco Alto</strong> `;
+  document.getElementById("prontuarioPadua").innerHTML = `Tromboproflaxia farmacologica com HBPM, HNF (de 12-12h ou 8-8h) ou fondaparina`;
+  document.getElementById("fundoScore").style.backgroundColor = "#EF3D2F";
+  }
+
 
 
     
@@ -238,13 +265,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Atualizar o texto do span com base na pontuação
     if (pontuacaoCaprini == 0) {
       recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Muito Baixo<br>Deambulação precose`;
+      document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Muito Baixo<br> `;
       document.getElementById("fundoScoreCaprini").style.backgroundColor = "#0059A7";
   } else if (pontuacaoCaprini >0 && pontuacaoCaprini < 3) {
-      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Rsco Baixo<br>Profilaxia mecánico (CPI)*`;
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Baixo<br>Profilaxia mecánico (CPI)*`;
+      document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Baixo<br> `;
+      document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia mecánico (CPI)* `;
       document.getElementById("fundoScoreCaprini").style.backgroundColor = "#488BC0";
       
   } else if (pontuacaoCaprini >= 3 && pontuacaoCaprini < 5) {
-      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Moderado<br>Profilaxia farmacólogica`; // Adicione sua recomendação aqui.
+      recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Moderado<br>Profilaxia farmacólogica`;
+      document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Moderado<br> `;
+      document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia farmacólogica `;
       document.getElementById("fundoScoreCaprini").style.backgroundColor = "#F47A75";
   } else {
       recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Alto Risco<br>Proflaxia farmacológica (HNF ou HBPM)
@@ -252,6 +284,12 @@ document.addEventListener("DOMContentLoaded", function () {
       antitrombo)<br>Pacientes de alto risco submetido à
       cirurgia oncológica abdominal e pélvica:
       estender a proflaxia por 4 semanas`;
+      document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Alto Risco<br> `;
+      document.getElementById("prontuarioCaprini").innerHTML = `Proflaxia farmacológica (HNF ou HBPM)
+      profilaxia mecáncia (CPI ou meias
+      antitrombo)<br>Pacientes de alto risco submetido à
+      cirurgia oncológica abdominal e pélvica:
+      estender a proflaxia por 4 semanas `;
       document.getElementById("fundoScoreCaprini").style.backgroundColor = "#EF3D2F";
   }
   
@@ -261,3 +299,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+
+
+function Export2Doc(element, filename = ''){
+  var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+  var postHtml = "</body></html>";
+  var html = preHtml+document.getElementById(element).innerHTML+postHtml;
+
+  var blob = new Blob(['\ufeff', html],{
+      type: 'application/msword'
+  });
+
+  var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html)
+
+  filename = filename?filename+'.doc': 'document.doc';
+
+  var downloadLink = document.createElement("a");
+
+  document.body.appendChild(downloadLink);
+
+  if(navigator.msSaveOrOpenBlob){
+      navigator.msSaveOrOpenBlob(blob, filename);
+  }else{
+      downloadLink.href = url;
+
+      downloadLink.download = filename;
+
+      downloadLink.click();
+  }
+
+  document.body.removeChild(downloadLink);
+
+
+}
+

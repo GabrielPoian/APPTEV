@@ -29,6 +29,9 @@
                 <li class="nav-item">
                   <a id="doseLink" class="nav-link" href="#">Calculo de dose</a>
                 </li>
+                <li class="nav-item">
+                  <a id="prontuario-link" class="nav-link" href="#">Prontuario</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Scores  
@@ -92,7 +95,7 @@
         <section class="doses" id="calculo-dose-section">
           <div class="container">
             <div class="esquerdo-conteiner">
-              <h2>Tratamento</h2>
+              <h2 id="doseH2">Tratamento</h2>
               <p>Dose para tratamento do tromboembolismo venoso com <br>ou sem embolia pulmonar</p>
             <div id="dosagem">
               <p>Enoxaparina<br>
@@ -110,7 +113,7 @@
                 </div>
             </div>
             <div class="direito-conteiner">
-              <h2>Profilaxia</h2>
+              <h2 id="doseH2">Profilaxia</h2>
               <p>Dose para profilaxia de TEV</p>
               <div id="dosagem">
               <p>Enoxaparina<br>
@@ -332,9 +335,9 @@
             <div class="direito-conteiner">
               <h2 class="score-h2">Recomendações</h2>
               <div id="fundoScoreCaprini">
-                  <span id="recomendacaoScoreCaprini">0<br>Risco Muito Baixo<br>Deambulação precose</span>
+                  <span id="recomendacaoScoreCaprini" >0<br>Risco Muito Baixo<br>Deambulação precose</span>
               </div>
-              <button id="botaoSalvarScore">Salvar Score</button>
+              <button  id="botaoSalvarScore" >Salvar Score</button>
           </div>
           <footer></footer>
       </div>
@@ -502,100 +505,172 @@
       </div>
       <div id="conteudo-pacientesObtetricas" style="display: none;">
         <h1>Avaliação de risco em pacientes obstétricas</h1>
-        <h2 class="score-h2">Fatores de risco</h2>
-          <div id="inputs-score">
-            <input type="checkbox" id="checkbox-score1" class="inputGrave">
-            <label for="checkbox-score1">TEV anterior (exceto um único evento relativo a cirurgia de grande porte).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score2" class="inputGrave">
-            <label for="checkbox-score2">TEV prévio provocado por cirurgia de grande porte.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score3" class="inputGrave">
-            <label for="checkbox-score3">Trombofilia conhecida de alto risco.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score4" class="inputGrave">
-            <label for="checkbox-score4">Comorbidades médicas como Câncer, Insuficiência cardíaca, lúpus eritematoso sistêmico ativo, poliartropatia inflamatória ou doença intestinal inflamatória, nefrose Diabetes Melitus Tipo 1 com nefropatia, doença falciforme, uso atual de drogas intravenosas.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score5" class="inputGrave">
-            <label for="checkbox-score5">História familiar de TEV não provocado ou relacionado a estrogênio em parente de primeiro grau.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score6" class="inputGrave">
-            <label for="checkbox-score6">Trombofilia de baixo risco conhecida (sem TEV).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score7" class="inputGrave">
-            <label for="checkbox-score7">Idade (>35 anos).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score8" class="inputGrave">
-            <label for="checkbox-score8">Obesidade.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score9" class="inputGrave">
-            <label for="checkbox-score9">Paridade >= 3.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score10" class="inputGrave">
-            <label for="checkbox-score10">Tabagismo.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score11" class="inputGrave">
-            <label for="checkbox-score11">Veias varicosas de grosso calibre.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score12" class="inputGrave">
-            <label for="checkbox-score12">Fatores de risco obstétricos.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score13" class="inputGrave">
-            <label for="checkbox-score13">Pré-eclâmpsia na gravidez atual.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score14" class="inputGrave">
-            <label for="checkbox-score14">FIV/técnica de reprodução assistida.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score15" class="inputGrave">
-            <label for="checkbox-score15">Gravidez múltipla.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score16" class="inputGrave">
-            <label for="checkbox-score16">Cesariana em trabalho de parto.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score17" class="inputGrave">
-            <label for="checkbox-score17">Cesariana eletiva.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score18" class="inputGrave">
-            <label for="checkbox-score18">Fórceps médio ou rotação.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score19" class="inputGrave">
-            <label for="checkbox-score19">Trabalho de parto prolongado (>24 horas).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score20" class="inputGrave">
-            <label for="checkbox-score20">HPP (>1 L ou transfusão).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score21" class="inputGrave">
-            <label for="checkbox-score21">Nascimento pré-termo <37+0 semanas na gravidez atual.</label>
-            <br>
+        <div class="container">
+          <div class="esquerdo-conteiner">
             <h2 class="score-h2">Fatores de risco</h2>
-            <br>
-            <input type="checkbox" id="checkbox-score22" class="inputMedio">
-            <label for="checkbox-score22">Natimorto na gravidez atual.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score23" class="inputMedio">
-            <label for="checkbox-score23">HPP (>1 L ou transfusão) na gravidez atual.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score24" class="inputMedio">
-            <label for="checkbox-score24">Nascimento pré-termo <37+0 semanas na gravidez atual.</label>
-            <br>
-            <h2 class="score-h2">Fatores de risco transitórios</h2>
-            <br>
-            <input type="checkbox" id="checkbox-score25" class="inputLeve">
-            <label for="checkbox-score25">Qualquer procedimento cirúrgico durante a gravidez ou o puerpério, exceto reparação imediata do períneo, como apendicectomia ou esterilização pós-parto.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score26" class="inputLeve">
-            <label for="checkbox-score26">Hipérnese.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score27" class="inputLeve">
-            <label for="checkbox-score27">SHO (apenas no primeiro trimestre).</label>
-            <br>
-            <input type="checkbox" id="checkbox-score28" class="inputLeve">
-            <label for="checkbox-score28">Infecção sistêmica atual.</label>
-            <br>
-            <input type="checkbox" id="checkbox-score29" class="inputLeve">
-            <label for="checkbox-score29">Imobilidade, desidratação.</label>
-            <br>
+            <div id="inputs-score">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score4" class="inputGrave inputScore">
+                  <span class="textoScore">TEV anterior (exceto um único evento relativo a cirurgia de grande porte).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score5" class="inputGrave inputScore">
+                  <span class="textoScore">TEV prévio provocado por cirurgia de grande porte.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score6" class="inputGrave inputScore">
+                  <span class="textoScore">Trombofilia conhecida de alto risco.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score7" class="inputGrave inputScore">
+                  <span class="textoScore">Comorbidades médicas como Câncer, Insuficiência cardíaca,<br> lúpus eritematoso sistêmico ativo, poliartropatia inflamatória ou doença intestinal inflamatória,<br>nefrose Diabetes Melitus Tipo 1 com nefropatia, doença falciforme, uso atual de drogas intravenosas.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score8" class="inputGrave inputScore">
+                  <span class="textoScore">História familiar de TEV não provocado ou relacionado a estrogênio em parente de primeiro grau.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score9" class="inputGrave inputScore">
+                  <span class="textoScore">Trombofilia de baixo risco conhecida (sem TEV).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score10" class="inputGrave inputScore">
+                  <span class="textoScore">>Idade (>35 anos).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score11" class="inputGrave inputScore">
+                  <span class="textoScore">>Obesidade.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score12" class="inputGrave inputScore">
+                  <span class="textoScore">>Paridade >= 3.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score13" class="inputGrave inputScore">
+                  <span class="textoScore">>Tabagismo.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score14" class="inputGrave inputScore">
+                  <span class="textoScore">>Veias varicosas de grosso calibre.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score15" class="inputGrave inputScore">
+                  <span class="textoScore">>Fatores de risco obstétricos.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score16" class="inputGrave inputScore">
+                  <span class="textoScore">>Pré-eclâmpsia na gravi inputScoredez atual.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score17" class="inputGrave inputScore">
+                  <span class="textoScore">>FIV/técnica de reprodução assistida.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score18" class="inputGrave inputScore">
+                  <span class="textoScore">>Gravi inputScoredez múltipla.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score19" class="inputGrave inputScore">
+                  <span class="textoScore">>Cesariana em trabalho de parto.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score20" class="inputGrave inputScore">
+                  <span class="textoScore">>Cesariana eletiva.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score21" class="inputGrave inputScore">
+                  <span class="textoScore">>Fórceps médio ou rotação.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score22" class="inputGrave inputScore">
+                  <span class="textoScore">>Trabalho de parto prolongado (>24 horas).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score23" class="inputGrave inputScore">
+                  <span class="textoScore">>HPP (>1 L ou transfusão).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score24" class="inputGrave inputScore">
+                  <span class="textoScore">>Nascimento pré-termo <37+0 semanas na gravidez atual.</span>
+              </label>
+              <br>
+              <h2 class="score-h2">Fatores de Risco</h2>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score25" class="inputMedio">
+                  <span class="textoScore">>Natimorto na gravidez atual.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score26" class="inputMedio">
+                  <span class="textoScore">>HPP (>1 L ou transfusão) na gravidez atual.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score27" class="inputMedio">
+                  <span class="textoScore">>Nascimento pré-termo <37+0 semanas na gravidez atual.</span>
+              </label>
+              <br>
+              <h2 class="score-h2">Fatores de Risco Transitórios</h2>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score28" class="inputLeve">
+                  <span class="textoScore">>Qualquer procedimento cirúrgico durante a gravidez ou o puerpério, exceto reparação imediata do períneo, como apendicectomia ou esterilização pós-parto.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score29" class="inputLeve">
+                  <span class="textoScore">>Hipérnese.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score30" class="inputLeve">
+                  <span class="textoScore">>SHO (apenas no primeiro trimestre).</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score31" class="inputLeve">
+                  <span class="textoScore">>Infecção sistêmica atual.</span>
+              </label>
+              <br>
+              <label class="checkbox-label">
+                  <input type="checkbox" id="checkbox-score32" class="inputLeve">
+                  <span class="textoScore">>Imobilidade, desidratação.</span>
+              </label>
+              <br>
           </div>
+          
+        </div>
+        <div class="direito-conteiner">
+          <h2 class="score-h2">Recomendações</h2>
+          <div id="fundoScoreCaprini">
+              <span id="recomendacaoScoreCaprini" >0<br>Risco Muito Baixo<br>Deambulação precose</span>
+          </div>
+          <button  id="botaoSalvarScore" >Salvar Score</button>
+      </div>
+      <footer></footer>
+  </div>
+       </div> 
 
       </div>
       <div id="conteudo-insuficienciaRenal" style="display: none;">
@@ -686,10 +761,37 @@
       <div id="conteudo-recursos" style="display: none;">
         <h1>Recursos</h1>
       </div>
+
+      <div id="conteudo-prontuario" style="display: none;">
+        <h1>Prontuário Médico</h1>
+        <div id="exportContent">
+          
+          
+         
+          <h2>Avaliação de Risco:</h2>
+          <br>
+          <span id="riscoCaprini"><strong></strong> </span>
+          <br>
+          <span id="riscoPadua"><strong></strong></span>
+          <br>
       
-          
-          
-        
+          <h2>Sugestões de Tratamento Futuro:</h2>
+          <br>
+          <span  id="prontuarioDosagem"></span>
+          <br>
+          <span id="prontuarioCaprini"></span>
+          <br>
+          <span  id="prontuarioPadua"></span>
+          <br>
+      
+          <h2>Assinatura do Médico:</h2>
+          <p>[Assinatura]</p>
+          <p id="data"></p>
+        </div>
+    
+        <button onclick="Export2Doc('exportContent', 'test');">Export as Doc</button>
+      </div>
+     
         
       
     </main>

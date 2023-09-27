@@ -47,7 +47,8 @@ main {
   align-items: center;
 }
 
-h2 {
+#doseH2 {
+ 
   display: inline-block;
   margin: 0rem 10rem;
 }
@@ -130,6 +131,7 @@ footer{
 
 #inputs-score{
   text-align: start;
+  width: 35rem;
 }
 
 
@@ -212,8 +214,19 @@ button:hover{
   pointer-events: none;
 }
 
+.linha {
+  margin-bottom: 20px;
+}
 
+#exportContent{
+  text-align: left;
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
 
+#exportContent h2{
+  margin-top: 1rem;
+}
 
 
 
