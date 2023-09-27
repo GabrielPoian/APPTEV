@@ -32,6 +32,7 @@
   margin-top: 1rem;
 }
 
+
 .teste:hover{
   background-color: black;
 }
@@ -39,6 +40,11 @@
 main {
   text-align: center;
   margin-top: 10rem;
+}
+
+
+main p{
+  font-size: 2rem;
 }
 #comoUsar{
   font-size: 1.4rem;
@@ -74,10 +80,12 @@ margin-left: 8rem;
 }
 
 #doseH2 {
- 
+  font-size: 3rem;
   display: inline-block;
   margin: 0rem 10rem;
+  margin-bottom: 1rem;
 }
+
 
 .container {
   display: flex;
@@ -223,7 +231,7 @@ footer{
   font-size: 1.07rem;
   border: solid black;
   border-radius: 2rem;
-  height: 10rem;
+  height: 12rem;
 }
 
 #botaoSalvarScore{
@@ -231,7 +239,18 @@ footer{
   border-radius: 1rem;
   height: 3rem;
   background-color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+  width: 10rem;
 
+}
+
+#botaoSalvarScore:hover{
+  transform: scale(1.2);
+}
+
+#botaoSalvarScore:active{
+  background-color: red;
 }
 input:hover{
   cursor: pointer;
@@ -268,7 +287,11 @@ button:hover{
 
 #botaoExport{
   background-color: azure;
+  width: 10rem;
+  height: 3rem;
+  margin-bottom: 2rem;
 }
+
 
 /* 
 Daqui pra baxo
