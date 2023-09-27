@@ -422,64 +422,85 @@
 </div>
 
       </div>
-      <div id="conteudo-recomendacao" style="display: none;">
-        <h1>Recomendações	</h1>
-        <h2>0<br>
-          Muito baixo</h2>
-        <p>Deambulaçao precoce</p>
-        <h2>1-2<br>
-          Risco baixo</h2>
-        <p>Profilaxia mecânica (CPI)*</p>
-        <h2>3-4<br>
-          Risco moderado</h2>
-        <p>Profilaxia farmacológica HNF,HBPM</p>
-        <h2>>5<br>
-          Alto risco</h2>
-        <p>Profilaxia farmacológica(HNF ou HBPM)
-          profilaxia mecância (CPI ou meias
-          antitrombo)
-          Pacientes de alto risco submetido à
-          cirurgia oncológica abdominal e pélvica:
-          estender a profilaxia por 4 semanas</p>
+      <div class="alinhar">
+        <div  id="conteudo-recomendacao" style="display: none;">
+          <h1>Recomendações</h1>
+          <div class="direito-conteiner" id="fundoRecomendação">
+          <h2 id=>0<br>
+            Muito baixo</h2>
+          <p>Deambulaçao precoce</p>
+        </div>
+        <div class="direito-conteiner" id="fundoRecomendação2">
+          <h2>1-2<br>
+            Risco baixo</h2>
+          <p>Profilaxia mecânica (CPI)*</p>
+        </div>
+          <div class="direito-conteiner" id="fundoRecomendação3">
+          <h2>3-4<br>
+            Risco moderado</h2>
+          <p>Profilaxia farmacológica HNF,HBPM</p>
+        </div>
+          <div class="direito-conteiner" id="fundoRecomendação4">
+          <h2>>5<br>
+            Alto risco</h2>
+          <p>Profilaxia farmacológica(HNF ou HBPM)
+            profilaxia mecância (CPI ou meias
+            antitrombo)
+            Pacientes de alto risco submetido à
+            cirurgia oncológica abdominal e pélvica:
+            estender a profilaxia por 4 semanas</p>
+          </div>
+        </div>
+              
+              
+        </div>
             
-            
-      </div>
+      
       <div id="conteudo-avaliacaoSafety" style="display: none;">
         <h1>Algoritmo de Avaliação de Risco Safety Zone</h1>
       </div>
       <div id="conteudo-posologiaCirurgico" style="display: none;">
-        <h1>Posologia</h1>
-        <h2>Risco intermediário</h2>
-        <h3>HNF</h3>
-        <p>5.000 UI, SC 2 vezes ao dia</p>
-        <h3>Enoxaparina</h3>
-        <p>20 mg, SC 1 vez ao dia</p>
-        <h3>Dalteparina</h3>
-        <p>2.500 UI, SC 1 vez ao dia</p>
-        <h2>Risco Alto</h2>
-        <h3>HNF</h3>
-        <p>5.000 UI, SC 3 vezes ao dia</p>
-        <h3>Enoxaparina</h3>
-        <p>40 mg, SC 1 vez ao dia</p>
-        <h3>Dalteparina</h3>
-        <p>5.000 UI, SC 1 vez ao dia</p>
-        <h1>Tempo de profilaxia recomendado</h1>
-        <h2>ATQ e Fratura de quadril</h2>
-        <p>4 a 5 semanas</p>
-        <h2>Oncológica </h2>
-        <p>3 a 4 semanas</p>
-        <h2>Politrauma e TRM</h2>
-        <p>Até recuperaçao </p>
-        <h2>Demais</h2>
-        <p>7 a 10 dias</p>
+          <div class="alinhar">
+          <h1>Posologia</h1>
+          <div class="direito-conteiner" id="posologiabox">
+            <h2>Risco intermediário</h2>
+            <h3>HNF</h3>
+            <p>5.000 UI, SC 2 vezes ao dia</p>
+            <h3>Enoxaparina</h3>
+            <p>20 mg, SC 1 vez ao dia</p>
+            <h3>Dalteparina</h3>
+            <p>2.500 UI, SC 1 vez ao dia</p>
+          </div>
+          <div class="direito-conteiner" id="posologiabox2">
+            <h2>Risco Alto</h2>
+            <h3>HNF</h3>
+            <p>5.000 UI, SC 3 vezes ao dia</p>
+            <h3>Enoxaparina</h3>
+            <p>40 mg, SC 1 vez ao dia</p>
+            <h3>Dalteparina</h3>
+            <p>5.000 UI, SC 1 vez ao dia</p>
+          </div>
+          <h1 class="direito-conteiner">Tempo de profilaxia recomendado</h1>
+          <div class="direito-conteiner" id="posologiabox3">
+            <h2>ATQ e Fratura de quadril</h2>
+            <p>4 a 5 semanas</p>
+            <h2>Oncológica </h2>
+            <p>3 a 4 semanas</p>
+            <h2>Politrauma e TRM</h2>
+            <p>Até recuperaçao </p>
+            <h2>Demais</h2>
+            <p>7 a 10 dias</p>
+          
+          
+  
 
 
 
 
 
-
-        <h4></h4>
-      </div>
+          </div>  
+          </div>
+          </div>
       <div id="conteudo-manejo" style="display: none;">
         <h1>Manejo Perioperatóriio</h1>
         <img class="imagemManejo" src="/imagens/imagemManejo.png">
@@ -789,7 +810,7 @@
           <p id="data"></p>
         </div>
     
-        <button onclick="Export2Doc('exportContent', 'test');">Export as Doc</button>
+        <button onclick="Export2Doc('exportContent', 'test');" id="botaoExport">Export as Doc</button>
       </div>
      
         

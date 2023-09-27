@@ -232,8 +232,102 @@ button:hover{
   margin-top: 1rem;
 }
 
+#exportContent span{
+  font-weight: 500;
+  font-size: 1.2rem;
 
+
+}
+
+
+#botaoExport{
+  background-color: azure;
+}
 
 /* 
 Daqui pra baxo
 */ 
+
+#fundoRecomendação{
+  background-color:#0059A7;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 12rem;
+  width:30rem;
+}
+#fundoRecomendação2{
+  background-color:rgb(72, 139, 192);
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 12rem;
+  width:30rem;
+}
+
+#fundoRecomendação3{
+  background-color:rgb(244, 122, 117);
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 12rem;
+  width:30rem;
+}
+#fundoRecomendação4{
+  background-color:rgb(239, 61, 47);
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 15rem;
+  width:30rem;
+}
+
+
+#posologiabox{
+  background-color:rgb(243, 207, 0);
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 18rem;
+  width:30rem;
+}
+
+#posologiabox2{
+  background-color:rgb(239, 61, 47);
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 18rem;
+  width:30rem;
+  
+}
+
+#posologiabox3{
+  background-color:#0059A7;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 22rem;
+  width:30rem;
+}
+
+.alinhar {
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}

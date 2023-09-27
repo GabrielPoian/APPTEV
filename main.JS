@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const dosagem = Math.ceil(peso * multiplicador);
 
       dosagemTratamento.textContent = dosagem + " mg";
-      document.getElementById("prontuarioDosagem").innerHTML = `Dosagem para tratamento: ${dosagem}mg<br>Dosagem para Profilaxia: ${dosagemProfilaxia.textContent }`;
+      document.getElementById("prontuarioDosagem").innerHTML = `Dosagem para tratamento: ${dosagem}mg de Enoxaparina<br>Dosagem para Profilaxia: ${dosagemProfilaxia.textContent } de Enoxaparina`;
       
     } else {
       dosagemTratamento.textContent = "Peso inválido";
