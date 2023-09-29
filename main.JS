@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxesGraveCaprini = document.querySelectorAll('.inputGraveCaprini');
   const checkboxesForteCaprini = document.querySelectorAll('.inputForteCaprini')
   const recomendacaoScoreCaprini = document.getElementById("recomendacaoScoreCaprini");
-  const checkboxesLeveObstreticas = document.querySelectorAll('.inputLeveObstreticas');
-  const checkboxesMedioObstretricas = document.querySelectorAll('.inputMedioObstreticas');
-  const checkboxesGraveObstreticas = document.querySelectorAll('.inputGraveObstreticas');
-  const recomendacaoScoreObstreticas = document.getElementById("recomendacaoScoreObstreticas");
+  const checkboxesLeveObstetricas = document.querySelectorAll('.inputLeveObstetricas');
+  const checkboxesMedioObstetricas = document.querySelectorAll('.inputMedioObstetricas');
+  const checkboxesGraveObstetricas = document.querySelectorAll('.inputGraveObstetricas');
+  const recomendacaoScoreObstetricas = document.getElementById("recomendacaoScoreObstetricas");
   
 
 
@@ -300,121 +300,109 @@ document.addEventListener("DOMContentLoaded", function () {
     
   }
 
-});
-checkboxesLeveObstretricas.forEach(function (checkbox) {
-  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
-});
 
-// Adicionar ouvinte de evento para checkboxes Médio
-checkboxesMedioObstretricas.forEach(function (checkbox) {
-  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
-});
-
-// Adicionar ouvinte de evento para checkboxes Grave
-checkboxesGraveObstretricas.forEach(function (checkbox) {
-  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
-});
-
-checkboxesForteObstretricas.forEach(function (checkbox) {
-  checkbox.addEventListener('change', calcularPontuacaoObstretricas);
-});
-
-function calcularPontuacaoObstretricas() {
-  let pontuacaoObstretricas = 0;
-
-  // Calcular pontuação com base nas checkboxes marcadas
-  checkboxesLeveObstretricas.forEach(function (checkbox) {
-    if (checkbox.checked) {
-      pontuacaoObstretricas += 1;
-    }
+  checkboxesLeveObstetricas.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoObstetricas);
   });
-
-  checkboxesMedioObstretricas.forEach(function (checkbox) {
-    if (checkbox.checked) {
-      pontuacaoObstretricas += 3;
-    }
-  });
-
-  checkboxesGraveObstretricas.forEach(function (checkbox) {
-    if (checkbox.checked) {
-      pontuacaoObstretricas += 4;
-    }
-  });
-
   
-
-  // Atualizar o texto do span com base na pontuação
-  if (pontuacaoObstretricas == 0) {
-    recomendacaoScoreObstretricas.innerHTML = `${pontuacaoObstretricas}<br>Risco Muito Baixo<br>Deambulação precose`;
-    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Muito Baixo<br> `;
-    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#0059A7";
-} else if (pontuacaoCaprini >0 && pontuacaoCaprini < 3) {
-    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Baixo<br>Profilaxia mecánico (CPI)*`;
-    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Baixo<br> `;
-    document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia mecánico (CPI)* `;
-    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#488BC0";
-    
-} else if (pontuacaoCaprini >= 3 && pontuacaoCaprini < 5) {
-    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Risco Moderado<br>Profilaxia farmacólogica`;
-    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Risco Moderado<br> `;
-    document.getElementById("prontuarioCaprini").innerHTML = `Profilaxia farmacólogica `;
-    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#F47A75";
-} else {
-    recomendacaoScoreCaprini.innerHTML = `${pontuacaoCaprini}<br>Alto Risco<br>Proflaxia farmacológica (HNF ou HBPM)
-    profilaxia mecáncia (CPI ou meias
-    antitrombo)<br>Pacientes de alto risco submetido à
-    cirurgia oncológica abdominal e pélvica:
-    estender a proflaxia por 4 semanas`;
-    document.getElementById("riscoCaprini").innerHTML = `<strong>Escore de Caprini: </strong>Alto Risco<br> `;
-    document.getElementById("prontuarioCaprini").innerHTML = `Proflaxia farmacológica (HNF ou HBPM)
-    profilaxia mecáncia (CPI ou meias
-    antitrombo)<br>Pacientes de alto risco submetido à
-    cirurgia oncológica abdominal e pélvica:
-    estender a proflaxia por 4 semanas `;
-    document.getElementById("fundoScoreCaprini").style.backgroundColor = "#EF3D2F";
-}
-
-
-
-  
-};
-
-
-
-
-
-
-
-
-function Export2Doc(element, filename = ''){
-  var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
-  var postHtml = "</body></html>";
-  var html = preHtml+document.getElementById(element).innerHTML+postHtml;
-
-  var blob = new Blob(['\ufeff', html],{
-      type: 'application/msword'
+  // Adicionar ouvinte de evento para checkboxes Médio
+  checkboxesMedioObstetricas.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoObstetricas);
   });
-
-  var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html)
-
-  filename = filename?filename+'.doc': 'document.doc';
-
-  var downloadLink = document.createElement("a");
-
-  document.body.appendChild(downloadLink);
-
-  if(navigator.msSaveOrOpenBlob){
-      navigator.msSaveOrOpenBlob(blob, filename);
-  }else{
-      downloadLink.href = url;
-
-      downloadLink.download = filename;
-
-      downloadLink.click();
+  
+  // Adicionar ouvinte de evento para checkboxes Grave
+  checkboxesGraveObstetricas.forEach(function (checkbox) {
+    checkbox.addEventListener('change', calcularPontuacaoObstetricas);
+  });
+  
+  function calcularPontuacaoObstetricas() {
+    let pontuacaoObstetricas = 0;
+  
+    // Calcular pontuação com base nas checkboxes marcadas
+    checkboxesLeveObstetricas.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoObstetricas += 1;
+      }
+    });
+  
+    checkboxesMedioObstetricas.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoObstetricas += 3;
+      }
+    });
+  
+    checkboxesGraveObstetricas.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        pontuacaoObstetricas += 4;
+      }
+    });
+  
+    // Atualizar o texto do span com base na pontuação
+    if (pontuacaoObstetricas == 0) {
+      recomendacaoScoreObstetricas.innerHTML = `${pontuacaoObstetricas}<br>Risco Muito Baixo<br>Deambulação precoce`;
+      document.getElementById("riscoObstetricas").innerHTML = `<strong>Escore de Obstetrícia:</strong> Risco Muito Baixo<br>`;
+      document.getElementById("fundoScoreObstetricas").style.backgroundColor = "#0059A7";
+    } else if (pontuacaoObstetricas > 0 && pontuacaoObstetricas < 3) {
+      recomendacaoScoreObstetricas.innerHTML = `${pontuacaoObstetricas}<br>Risco Baixo<br>Profilaxia mecânica (CPI)*`;
+      document.getElementById("riscoObstetricas").innerHTML = `<strong>Escore de Obstetrícia:</strong> Risco Baixo<br>`;
+      document.getElementById("prontuarioObstetricas").innerHTML = `Profilaxia mecânica (CPI)*`;
+      document.getElementById("fundoScoreObstetricas").style.backgroundColor = "#488BC0";
+    } else if (pontuacaoObstetricas >= 3 && pontuacaoObstetricas < 5) {
+      recomendacaoScoreObstetricas.innerHTML = `${pontuacaoObstetricas}<br>Risco Moderado<br>Profilaxia farmacológica`;
+      document.getElementById("riscoObstetricas").innerHTML = `<strong>Escore de Obstetrícia:</strong> Risco Moderado<br>`;
+      document.getElementById("prontuarioObstetricas").innerHTML = `Profilaxia farmacológica`;
+      document.getElementById("fundoScoreObstetricas").style.backgroundColor = "#F47A75";
+    } else {
+      recomendacaoScoreObstetricas.innerHTML = `${pontuacaoObstetricas}<br>Alto Risco<br>Profilaxia farmacológica (HNF ou HBPM)
+      profilaxia mecânica (CPI ou meias antitrombo)<br>Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica:
+      estender a profilaxia por 4 semanas`;
+      document.getElementById("riscoObstetricas").innerHTML = `<strong>Escore de Obstetrícia:</strong> Alto Risco<br>`;
+      document.getElementById("prontuarioObstetricas").innerHTML = `Profilaxia farmacológica (HNF ou HBPM)
+      profilaxia mecânica (CPI ou meias antitrombo)<br>Pacientes de alto risco submetidos à cirurgia oncológica abdominal e pélvica:
+      estender a profilaxia por 4 semanas`;
+      document.getElementById("fundoScoreObstetricas").style.backgroundColor = "#EF3D2F";
+    }
   }
+  
+  
 
-  document.body.removeChild(downloadLink);
+
+
+
+
+
+})
+
+  // Defina a função Export2Doc no escopo global
+  function Export2Doc(element, filename = ''){
+    var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+    var postHtml = "</body></html>";
+    var html = preHtml+document.getElementById(element).innerHTML+postHtml;
+
+    var blob = new Blob(['\ufeff', html],{
+        type: 'application/msword'
+    });
+
+    var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html)
+
+    filename = filename?filename+'.doc': 'document.doc';
+
+    var downloadLink = document.createElement("a");
+
+    document.body.appendChild(downloadLink);
+
+    if(navigator.msSaveOrOpenBlob){
+        navigator.msSaveOrOpenBlob(blob, filename);
+    }else{
+        downloadLink.href = url;
+
+        downloadLink.download = filename;
+
+        downloadLink.click();
+    }
+
+    document.body.removeChild(downloadLink);
 
 
 }
-
+   

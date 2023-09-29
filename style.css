@@ -234,6 +234,16 @@ footer{
   height: 12rem;
 }
 
+#fundoScoreObstetricas{
+  background-color:#0059A7;
+  font-weight: bold;
+  color: #FFF6F5;
+  font-size: 1.07rem;
+  border: solid black;
+  border-radius: 2rem;
+  height: 12rem;
+}
+
 #botaoSalvarScore{
   margin: 1rem 1rem 0 1rem;
   border-radius: 1rem;
